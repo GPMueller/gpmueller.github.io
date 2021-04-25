@@ -1,0 +1,210 @@
+/* -------------- Fonts -------------- */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/* -------------- Main -------------- */
+
+body {
+  padding-top: 50px;
+  font-size: 12pt;
+  font-family: "San Francisco", sans-serif;
+  font-weight: 450;
+}
+
+.rounded-button {
+  padding: 0 10px;
+  background-color: #ffffff;
+  color: #964546;
+  border: 2px solid #964546;
+  border-color: #964546;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.rounded-button:hover {
+  background-color: #964546;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.custom-link {
+  color: rgb(11, 218, 0);
+  transition-duration: 0.4s;
+}
+.custom-link:hover {
+  color: #964546;
+  text-decoration: none;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: rgba(99, 99, 99, 0.33);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+}
+
+pre {
+  color: #bbbbbb;
+  background-color: #333333;
+  border: 0;
+  font-size: 8pt;
+  width: 100%;
+  flex-grow: 1;
+  text-align: left;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre code {
+  white-space: inherit;
+  overflow: inherit;
+}
+
+/* -------------- Navbar -------------- */
+
+nav.navbar.navbar-inverse {
+  border: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #bbbbbb;
+  font-size: 12pt;
+}
+
+/* -------------- Images -------------- */
+
+img.large-only {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  img.large-only {
+    display: inherit;
+  }
+}
+
+img.small-only {
+  display: inherit;
+}
+
+@media (min-width: 992px) {
+  img.small-only {
+    display: none;
+  }
+}
+
+/* -------------- Section -------------- */
+
+section {
+  padding: 3em 0;
+}
+
+/* -------------- Section header -------------- */
+
+.section-header {
+  width: 90%;
+  padding: 0.3em 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.section-header p {
+  color: #555555;
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    width: 70%;
+  }
+}
+
+/* -------------- Info row -------------- */
+
+.info-row {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555555;
+}
+
+.info-row h1,
+.info-row h2,
+.info-row h3,
+.info-row h4,
+.info-row h5,
+.info-row h6 {
+  color: #333333;
+  font-weight: 500;
+}
+
+.info-row>div {
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .info-row>div {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.info-row>div>img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info-row b {
+  font-weight: 600;
+}
+
+.info-row-left {
+  text-align: left;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 1em;
+}
+
+.info-row-right {
+  flex-direction: row;
+  padding-left: 1em;
+  padding-right: 0;
+}

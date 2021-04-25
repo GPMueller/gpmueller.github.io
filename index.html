@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="gpmueller.github.io">
+  <meta name="author" content="G. P. Mueller">
+
+  <title>gpmueller.github.io</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand custom-link" href="#top" style="font-weight: 400;">gpmueller.github.io</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a class="custom-link" href="#projects" style="font-weight: 400;">Projects</a></li>
+          <li><a class="custom-link" href="https://github.com/GPMueller" target="_blank"
+              style="font-weight: 400;">GitHub <img src="img/GitHub-Mark-Light-64px.png" alt="GitHub Icon"
+                style="margin-left: 5px; margin-top:-5px; height:18px;" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <a name="projects"></a>
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Open source projects</h2>
+        <hr align="left"
+          style="margin-top: -0.4em; height: 2px; width: 55%; border-width: 0; color: gray; background-color: gray">
+        <p>My open source hobby projects, created by me and in collaboration with friends and colleagues</p>
+        <p>
+          <a class="github-button" href="https://github.com/GPMueller" data-show-count="true"
+            aria-label="Follow @GPMueller on GitHub">Follow @GPMueller</a>
+        </p>
+      </div>
+      <div class="info-row">
+        <div class="info-row-left">
+          <h3>
+            <a href="https://github.com/spirit-code/spirit" target="_blank" role="button">Spirit</a>
+            <a class="github-button" href="https://github.com/spirit-code/spirit" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star spirit-code/spirit on GitHub">Star</a>
+          </h3>
+          <p>
+            A major output of my PhD project, Spirit is a scientific software for simulating magnetism on the atomic
+            scale.
+          </p>
+          <br>
+          <p class="text-center">
+            <a href="https://spirit-code.github.io/web.html" target="_blank" role="button" class="rounded-button">Try
+              Spirit Web!</a>
+            <br>
+            <h7>📱 also runs on your smartphone 📱</h7>
+          </p>
+          <br>
+          <p>
+            Originally working on a Fortran codebase, I created this project to get access to better portability, better
+            libraries and be able to add a real-time visualisation. Spirit runs on everything, from your smartphone to
+            supercomputers and is already used by a multitude of researchers around the entire world, cited in a variety
+            of scientific publications: <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.224414"
+              target="_blank" role="button" class="rounded-button">G. P. Müller et al. (2019)</a>.
+          </p>
+        </div>
+        <div class="info-row-right" style="text-align: center;">
+          <img src="img/logo_spirit_light.png" width=90% alt="Spirit">
+          <img src="img/bobber.png" width=45% alt="Spirit">
+          <img src="img/hopfion.png" width=45% alt="Spirit">
+        </div>
+      </div>
+
+      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-row-left" style="text-align: center;">
+          <img src="img/clang-build.gif" width=95% alt="clang-build demonstration">
+        </div>
+        <div class="info-row-right">
+          <h3>
+            <a href="https://github.com/Trick-17/clang-build" target="_blank" role="button">clang-build</a>
+            <a class="github-button" href="https://github.com/Trick-17/clang-build" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star Trick-17/clang-build on GitHub">Star</a>
+          </h3>
+          <p>
+            A cross-platform C++ build system written in Python
+          </p>
+          <p>
+            Having become fed up with the idiosyncracies of CMake 5 years ago,
+            I decided I had to try and do a better job for small C++ projects.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-row-left">
+          <h3>
+            <a href="https://github.com/GPMueller/imgui-app" target="_blank" role="button">ImGui App</a>
+            <a class="github-button" href="https://github.com/GPMueller/imgui-app" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star GPMueller/imgui-app on GitHub">Star</a>
+          </h3>
+          <p>A basic cross-platform GUI application with some example features.</p>
+          <p>
+            It is automatically built and released via the CI and deployed as a web app to <a
+              href="https://gpmueller.github.io/imgui-app" target="_blank"
+              role="button">gpmueller.github.io/imgui-app</a>.
+          </p>
+          <p>
+            This is a hobby project on which I am trying to setup the most generic application I can.
+            The web app can already trigger desktop notifications, but there is lots more I would like to do.
+          </p>
+        </div>
+        <div class="info-row-right" style="text-align: right;">
+          <p>
+            <img src="img/imgui-app-logo.png" width=90% alt="ImGui App Logo">
+          </p>
+          <br>
+          <p class="text-center">
+            <a href="https://gpmueller.github.io/imgui-app" target="_blank" role="button" class="rounded-button">Try
+              the web app!</a>
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-row-left">
+          <p>
+            By wrapping your functions into <code>try</code>/<code>catch</code> blocks, you can use the
+            trace library to generate clean backtraces through your call stack as the exception is thrown
+            up the call stack until it reaches the point where you handle it.
+          </p>
+          <p>
+            An <a href="https://github.com/GPMueller/mwe-cpp-exception">example</a> backtrace looks like this:
+          </p>
+          <pre><code>Library API: Exception caught in function 'api_function'
+Backtrace:
+~/git/mwe/src/detail/Library.cpp:17 library_function failed
+~/git/mwe/src/detail/Library.cpp:13 could not open file "nonexistent.txt"</code></pre>
+        </div>
+        <div class="info-row-right">
+          <h3><a href="https://github.com/GPMueller/trace" target="_blank" role="button">trace</a>
+            <a class="github-button" href="https://github.com/GPMueller/trace" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star GPMueller/trace on GitHub">Star</a>
+          </h3>
+          <p>
+            Cross-platform backtracing using standard C++ exceptions
+          </p>
+          <p>
+            A topic that comes up regularly in C++ is how to deal with errors.
+            Because I could not find a satisfactory solution without platform-specific dependencies,
+            I created my own solution. The only drawback is the reliance on exceptions, which somewhat
+            limits the possible applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a name="about"></a>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script>
+    // Remove the location hash for the case of '#top'
+    function removeHash() {
+      history.pushState("", document.title, window.location.pathname
+        + window.location.search);
+    };
+    $(window).bind('hashchange', function (event) {
+      var hash = location.hash.replace('#', '');
+      if (hash == 'top')
+        removeHash();
+    });
+
+    // Close navbar-collapse when an item is clicked
+    $(function () {
+      var navCollapse = $(".navbar-collapse");
+      var navBrand = $(".navbar-brand");
+      navBrand.on("click", null, function () {
+        navCollapse.collapse('hide');
+      });
+      navCollapse.on("click", "a:not([data-toggle])", null, function () {
+        navCollapse.collapse('hide');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
