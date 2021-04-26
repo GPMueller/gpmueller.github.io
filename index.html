@@ -107,11 +107,7 @@
         <span class="dot"></span>
       </div>
 
-      <div class="info-row">
-        <div class="info-row-left" style="text-align: center;">
-          <br>
-          <img src="img/clang-build.gif" width=95% alt="clang-build demonstration">
-        </div>
+      <div class="info-row info-row-reverse">
         <div class="info-row-right">
           <h3>
             <a href="https://github.com/Trick-17/clang-build" target="_blank" role="button">clang-build</a>
@@ -126,6 +122,10 @@
             Having become fed up with the idiosyncracies of CMake 5 years ago,
             I decided I had to try and do a better job for small C++ projects.
           </p>
+        </div>
+        <div class="info-row-left" style="text-align: center;">
+          <br>
+          <img src="img/clang-build.gif" width=95% alt="clang-build demonstration">
         </div>
       </div>
 
@@ -176,22 +176,7 @@
         <span class="dot"></span>
       </div>
 
-      <div class="info-row">
-        <div class="info-row-left">
-          <br>
-          <p>
-            By wrapping your functions into <code>try</code>/<code>catch</code> blocks, you can use the
-            trace library to generate clean backtraces through your call stack as the exception is thrown
-            up the call stack until it reaches the point where you handle it.
-          </p>
-          <p>
-            An <a href="https://github.com/GPMueller/mwe-cpp-exception">example</a> backtrace looks like this:
-          </p>
-          <pre><code>Library API: Exception caught in function 'api_function'
-Backtrace:
-~/git/mwe/src/detail/Library.cpp:17 library_function failed
-~/git/mwe/src/detail/Library.cpp:13 could not open file "nonexistent.txt"</code></pre>
-        </div>
+      <div class="info-row info-row-reverse">
         <div class="info-row-right">
           <h3>
             <a href="https://github.com/GPMueller/trace" target="_blank" role="button">trace</a>
@@ -208,6 +193,21 @@ Backtrace:
             I created my own solution. The only drawback is the reliance on exceptions, which somewhat
             limits the possible applications.
           </p>
+        </div>
+        <div class="info-row-left">
+          <br>
+          <p>
+            By wrapping your functions into <code>try</code>/<code>catch</code> blocks, you can use the
+            trace library to generate clean backtraces through your call stack as the exception is thrown
+            up the call stack until it reaches the point where you handle it.
+          </p>
+          <p>
+            An <a href="https://github.com/GPMueller/mwe-cpp-exception">example</a> backtrace looks like this:
+          </p>
+          <pre><code>Library API: Exception caught in function 'api_function'
+Backtrace:
+~/git/mwe/src/detail/Library.cpp:17 library_function failed
+~/git/mwe/src/detail/Library.cpp:13 could not open file "nonexistent.txt"</code></pre>
         </div>
       </div>
     </div>
