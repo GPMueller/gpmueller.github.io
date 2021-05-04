@@ -116,11 +116,17 @@
               data-show-count="true" aria-label="Star Trick-17/clang-build on GitHub">Star</a>
           </h3>
           <p>
-            A cross-platform C++ build system written in Python
+            A clang-based cross-platform C++ build system written in Python.
           </p>
           <p>
-            Having become fed up with the idiosyncracies of CMake 5 years ago,
-            I decided I had to try and do a better job for small C++ projects.
+            Having become fed up with the idiosyncracies of CMake already 5 years ago, I decided I
+            had to try and do a better job for small C++ projects.
+          </p>
+          <p>
+            clang-build makes a set of opinionated assumptions in order to provide an easy way to
+            build small projects without any configuration. Larger projects will often still require
+            only little configuration, while projects like boost will still be quite easy to setup
+            (though boost requires <i>a lot</i> of configuration due to its sheer size).
           </p>
         </div>
         <div class="info-row-left" style="text-align: center;">
@@ -145,14 +151,16 @@
             <a class="github-button" href="https://github.com/GPMueller/imgui-app" data-icon="octicon-star"
               data-show-count="true" aria-label="Star GPMueller/imgui-app on GitHub">Star</a>
           </h3>
-          <p>A basic cross-platform GUI application with some example features.</p>
+          <p>
+            A basic cross-platform GUI application with some example features.
+          </p>
           <p>
             It is automatically built and released via the CI and deployed as a web app to <a
               href="https://gpmueller.github.io/imgui-app" target="_blank"
               role="button">gpmueller.github.io/imgui-app</a>.
           </p>
           <p>
-            This is a hobby project on which I am trying to setup the most generic application I can.
+            This is a hobby project on which I am trying to setup the most generic GUI application I can.
             The web app can already trigger desktop notifications, but there is lots more I would like to do.
           </p>
         </div>
@@ -185,13 +193,17 @@
               data-show-count="true" aria-label="Star GPMueller/trace on GitHub">Star</a>
           </h3>
           <p>
-            Cross-platform backtracing using standard C++ exceptions
+            Cross-platform exception backtracing using standard C++.
           </p>
           <p>
             A topic that comes up regularly in C++ is how to deal with errors.
             Because I could not find a satisfactory solution without platform-specific dependencies,
             I created my own solution. The only drawback is the reliance on exceptions, which somewhat
             limits the possible applications.
+          </p>
+          <p>
+            For a more minimalistic example, see
+            <a href="https://github.com/GPMueller/mwe-cpp-exception">github.com/GPMueller/mwe-exception</a>.
           </p>
         </div>
         <div class="info-row-left">
