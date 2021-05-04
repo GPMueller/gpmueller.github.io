@@ -35,6 +35,7 @@
 /* -------------- Main -------------- */
 
 body {
+  background-color: #333333;
   padding-top: 50px;
   font-size: 12pt;
   font-family: "San Francisco", sans-serif;
@@ -43,7 +44,7 @@ body {
 
 .rounded-button {
   padding: 0 10px;
-  background-color: #ffffff;
+  background-color: white;
   color: #964546;
   border: 2px solid #964546;
   border-color: #964546;
@@ -159,6 +160,7 @@ nav.navbar.navbar-inverse {
 
 section {
   padding: 3em 0;
+  background-color: white;
 }
 
 /* -------------- Section header -------------- */
@@ -218,13 +220,15 @@ section {
   margin-top: 0;
 }
 
-.info-row>div {
+.info-row>.info-row-left,
+.info-row>.info-row-right {
   flex-grow: 0;
   flex-shrink: 0;
   max-width: 100%;
 }
 @media (min-width: 768px) {
-  .info-row>div {
+  .info-row>.info-row-left,
+  .info-row>.info-row-right {
     flex-basis: 50%;
     max-width: 50%;
   }
@@ -258,8 +262,47 @@ section {
 
 .language-indicator {
   padding: 0 5px;
-  color: #456896;
-  border: 2px solid #456896;
-  border-color: #456896;
+  color: #575757;
+  border: 2px solid #575757;
+  border-color: #575757;
   border-radius: 10px;
+  margin: 0.25em;
+}
+
+/* -------------- Papers table -------------- */
+
+.papers-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.papers-table-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.25em;
+  margin-bottom: 1em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background-color: transparent;
+  border: 2px solid #5A86B2;
+  border-color: #5A86B2;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: left;
+  transition-duration: 0.4s;
+}
+
+.papers-table-row>div {
+  padding: 0.5em;
+}
+
+.papers-table-row:hover {
+  background-color: #5A86B2;
+  color: white;
+  text-decoration: none;
 }
