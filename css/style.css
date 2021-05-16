@@ -62,12 +62,23 @@ body {
 }
 
 .custom-link {
-  color: rgb(11, 218, 0);
+  color: #bbbbbb;
   transition-duration: 0.4s;
 }
 .custom-link:hover {
-  color: #964546;
+  color: white;
   text-decoration: none;
+}
+
+.custom-link>img {
+  filter: invert(77%) sepia(1%) saturate(0%) hue-rotate(113deg) brightness(99%) contrast(93%);
+  margin-left: 5px;
+  margin-top:-5px;
+  height:18px;
+  transition-duration: 0.4s;
+}
+.custom-link:hover>img {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(186deg) brightness(103%) contrast(101%);
 }
 
 .dot {
