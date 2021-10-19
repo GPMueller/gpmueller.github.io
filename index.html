@@ -32,14 +32,21 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand custom-link" href="#top" style="font-weight: 400;">gpmueller.github.io</a>
+        <div class="theme-switch-wrapper" style="padding-left: 1em">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
       </div>
       <div id="navbar" class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav" style="font-weight: 400;">
           <li><a class="custom-link" href="#projects">Projects</a></li>
           <li><a class="custom-link" href="#papers">Papers</a></li>
           <li><a class="custom-link" href="#about">About Me</a></li>
-          <li><a class="custom-link" href="https://github.com/GPMueller" target="_blank">GitHub <img
-                src="img/github.svg" alt="GitHub Icon" /></a>
+          <li>
+            <a class="custom-link" href="https://github.com/GPMueller" target="_blank">GitHub <img src="img/github.svg"
+                alt="GitHub Icon" /></a>
           </li>
         </ul>
       </div>
@@ -111,6 +118,7 @@
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+        <span class="dot"></span>
       </div>
 
       <div class="info-row info-row-reverse">
@@ -142,6 +150,7 @@
       </div>
 
       <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -183,6 +192,7 @@
       </div>
 
       <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -232,7 +242,7 @@ Backtrace:
   </section>
 
   <a name="papers"></a>
-  <section style="background-color: #eee">
+  <section style="background-color: var(--bg-color-alternate);">
     <div class="container">
       <div class="section-header">
         <h2>Scientific papers</h2>
@@ -406,9 +416,9 @@ Backtrace:
     </div>
   </section>
 
-  <section style="background-color: #333333; padding: 1.5em 0; text-align: center;">
-    <a class="custom-link" href="mailto://gpmueller@outlook.com" style="font-weight: 400;">
-      <img src="img/envelope.svg" alt="Envelope" style="margin-top: 2px;" />
+  <section style="background-color: var(--heading-color); padding: 1.5em 0; text-align: center;">
+    <a class="custom-link" href="mailto://gpmueller@outlook.com" style="font-weight: 400; font-size: 13pt;">
+      <img src="img/envelope.svg" alt="Envelope" style="margin-top: 2px; margin-right: 2px;" />
       gpmueller@outlook.com
     </a>
   </section>
@@ -440,6 +450,19 @@ Backtrace:
         navCollapse.collapse('hide');
       });
     });
+  </script>
+
+  <script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
+    toggleSwitch.addEventListener('change', switchTheme, false);
   </script>
 
 </body>
