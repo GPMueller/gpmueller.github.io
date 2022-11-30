@@ -251,6 +251,152 @@ Backtrace:
 ~/git/mwe/src/detail/Library.cpp:13 could not open file "nonexistent.txt"</code></pre>
         </div>
       </div>
+
+      <div style="padding: 2em;">
+      </div>
+
+      <button class="collapser" style="text-align: center; display: flex;">
+        <h3>
+          Minimum working examples and other useful things
+        </h3>
+      </button>
+
+      <div class="collapsercontent">
+
+        <div style="padding: 1em;">
+        </div>
+
+        <div>
+          <h3>
+            <a href="https://github.com/GPMueller/eigen-cuda" target="_blank" role="button">eigen-cuda</a>
+            &nbsp;
+            <a class="github-button" href="https://github.com/GPMueller/eigen-cuda" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star GPMueller/eigen-cuda on GitHub">Star</a>
+          </h3>
+          <p>
+            How to use Eigen3 inside CUDA kernels.
+          </p>
+          <p>
+            An <a href="https://github.com/GPMueller/eigen-cuda">example</a> kernel looks like this:
+          </p>
+          <pre><code>__global__ void cu_dot(Eigen::Vector3d *v1,
+                       Eigen::Vector3d *v2,
+                       double *out, size_t N)
+{
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    if(idx < N)
+    {
+        out[idx] = v1[idx].dot(v2[idx]);
+    }
+    return;
+}</code></pre>
+        </div>
+
+        <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div>
+          <h3>
+            <a href="https://github.com/Trick-17/FMath" target="_blank" role="button">FMath</a>
+            &nbsp;
+            <a class="github-button" href="https://github.com/Trick-17/FMath" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star Trick-17/FMath on GitHub">Star</a>
+          </h3>
+          <p>
+            An expression template library to do some vector- and matrix-math using Eigen3 with some nice
+            slicing and dicing.
+          </p>
+          <p>
+            The following example shows some operations, functions and slicing
+          </p>
+          <pre><code>Field<float> sf1{1,2,3,4,5,6}, sf2{1,2,3,4,5,6};
+Field<Eigen::Vector3> vf1(5), vf2(5);
+
+// Element-wise dot product
+Field<float> sf_dot = vf1.dot(vf2);
+
+// Operate on subsets
+sf1[{0,1,2}] = sf2[{0,1,2}] + sf_dot[{3,4,5}];
+
+// Assign slice of field from subset of other field
+sf2.slice(0,1) = sf1[{1,2}];</code></pre>
+        </div>
+
+        <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div>
+          <h3>
+            <a href="https://github.com/Trick-17/arch-installer" target="_blank" role="button">arch-installer</a>
+            &nbsp;
+            <a class="github-button" href="https://github.com/Trick-17/arch-installer" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star Trick-17/arch-installer on GitHub">Star</a>
+          </h3>
+          <p>
+            This repo provides an scripts that performs common installation steps like setting up the locale and installing commonly used packages.
+          </p>
+        </div>
+
+        <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div>
+          <h3>
+            <a href="https://github.com/spirit-code/ovf" target="_blank" role="button">ovf</a>
+            &nbsp;
+            <a class="github-button" href="https://github.com/spirit-code/ovf" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star spirit-code/ovf on GitHub">Star</a>
+          </h3>
+          <p>
+            A file I/O library for the OOMMF vector file format. It has a C interface and wrappers in Python
+            and Fortran.
+          </p>
+        </div>
+
+        <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div>
+          <h3>
+            <a href="https://github.com/GPMueller/clang-api-doc" target="_blank" role="button">clang-api-doc</a>
+            &nbsp;
+            <a class="github-button" href="https://github.com/GPMueller/clang-api-doc" data-icon="octicon-star"
+              data-show-count="true" aria-label="Star GPMueller/clang-api-doc on GitHub">Star</a>
+          </h3>
+          <p>
+            A clang-based cross-platform C++ API documentation generator written in Python.
+          </p>
+        </div>
+
+        <div style="padding: 1em;">
+        </div>
+
+      </div>
+
     </div>
   </section>
 

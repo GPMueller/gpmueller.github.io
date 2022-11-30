@@ -379,6 +379,72 @@ section {
   }
 }
 
+/* -------------- Collapser-button -------------- */
+
+.collapser {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  cursor: pointer;
+  padding-left: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition-duration: 0.4s;
+}
+
+.collapser h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.collapser:hover {
+  background-color: var(--secondary-color);
+}
+
+.collapser:before {
+  float: right;
+  content: "\002B";
+  color: var(--font-color);
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.active:before {
+  content: "\2212";
+  color: var(--font-color);
+  font-size: 2em;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.collapsercontent {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--primary-color-faded);
+}
+
+.collapsercontent .info-row {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .collapser {
+    width: 85%;
+  }
+  .collapsercontent {
+    width: 85%;
+  }
+}
+
 /* -------------- Papers table -------------- */
 
 .papers-table {
