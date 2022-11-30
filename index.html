@@ -78,7 +78,7 @@
       </div>
       <div class="info-row">
         <div class="info-row-left">
-          <h3>
+          <h3 style="margin-top: 2em">
             <a href="https://github.com/spirit-code/spirit" target="_blank" role="button">Spirit</a>
             &nbsp;
             <a class="github-button" href="https://github.com/spirit-code/spirit" data-icon="octicon-star"
@@ -112,7 +112,7 @@
         </div>
       </div>
 
-      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+      <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -149,7 +149,7 @@
         </div>
       </div>
 
-      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+      <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -191,7 +191,7 @@
         </div>
       </div>
 
-      <div style="text-align: center; padding: 20px; margin-top: 2em; margin-bottom: 2em;">
+      <div style="text-align: center; padding: 20px; margin-top: 3em; margin-bottom: 3em;">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -218,6 +218,11 @@
             limits the possible applications.
           </p>
           <p>
+            By wrapping your functions into <code>try</code>/<code>catch</code> blocks, you can use the
+            trace library to generate clean backtraces through your call stack as the exception is thrown
+            up the call stack until it reaches the point where you handle it.
+          </p>
+          <p>
             For a more minimalistic example, see
             <a href="https://github.com/GPMueller/mwe-cpp-exception">github.com/GPMueller/mwe-exception</a>.
           </p>
@@ -225,12 +230,20 @@
         <div class="info-row-left">
           <br>
           <p>
-            By wrapping your functions into <code>try</code>/<code>catch</code> blocks, you can use the
-            trace library to generate clean backtraces through your call stack as the exception is thrown
-            up the call stack until it reaches the point where you handle it.
+            Using trace, the following snippet from an <a href="https://github.com/GPMueller/mwe-cpp-exception">example</a>
           </p>
+          <pre><code>try
+{
+    detail::library_function();
+    return API_RETURN::SUCCESS;
+}
+catch( const std::exception & ex )
+{
+    detail::library_handle_exception(ex);
+    return API_RETURN::FAILURE;
+}</code></pre>
           <p>
-            An <a href="https://github.com/GPMueller/mwe-cpp-exception">example</a> backtrace looks like this:
+            may produce a backtrace that looks something like this:
           </p>
           <pre><code>Library API: Exception caught in function 'api_function'
 Backtrace:
@@ -475,6 +488,23 @@ Backtrace:
       }
     }
     toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
+
+  <script>
+    var coll = document.getElementsByClassName("collapser");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
   </script>
 
 </body>
